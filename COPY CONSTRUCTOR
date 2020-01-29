@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+#include<string.h>
+class star
+{ string first_name;
+  string  middle_name;
+  string last_name;
+  
+  public:
+  	star()
+  	{first_name="krishan";
+  	middle_name="kumar";
+  	last_name="jangra";
+    }
+	  
+   star(star&m)
+   {first_name=m.first_name;
+    middle_name=m.middle_name;
+    last_name=m.last_name;
+   }
+   void show()
+   {cout<<"first name is ="<<first_name<<endl;
+    cout<<"middle name is ="<<middle_name<<endl;
+    cout<<"last name is ="<<last_name<<endl;
+
+   }
+   
+   void getdata()
+   {cout<<"enter the three strings"<<endl;
+    cin>>first_name>>middle_name>>last_name;
+   }
+};
+
+  int main()
+  { star a1;
+    a1.show();
+	a1.getdata();
+	star a2(a1);
+	a2.show();
+	
+	return 0; 
+  }
